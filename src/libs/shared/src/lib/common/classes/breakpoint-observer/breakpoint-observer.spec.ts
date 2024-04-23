@@ -1,7 +1,7 @@
-import { BreakpointObserver } from './breakpoint-observer';
+import { BreakpointObserverUtil } from './breakpoint-observer';
 
 describe('BreakpointObserver', () => {
   it('should create an instance', () => {
-    expect(new BreakpointObserver()).toBeTruthy();
+    expect(new BreakpointObserverUtil()).toBeTruthy();
   });
 });
