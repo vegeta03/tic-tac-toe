@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@tic-tac-toe/board": ["src/libs/ui/src/index.ts"],
       "@tic-tac-toe/common": ["src/libs/shared/src/index.ts"]
     }
   },
