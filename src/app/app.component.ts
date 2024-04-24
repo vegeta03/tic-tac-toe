@@ -3,10 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { BreakpointObserverUtil } from '@tic-tac-toe/common';
+import { BoardComponent } from '@tic-tac-toe/board';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, AsyncPipe],
+  imports: [RouterModule, AsyncPipe, BoardComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
