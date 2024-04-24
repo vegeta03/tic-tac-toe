@@ -6,8 +6,6 @@ import { cellID, gameBoard, position } from '../../types';
   providedIn: 'root',
 })
 export class BoardService {
-  private _board: gameBoard = [];
-
   // Columns as chars for a board game like Taikyoku Shogi, which uses a 36x36 grid.
   columns = [
     'A',
@@ -48,6 +46,8 @@ export class BoardService {
     'AJ',
   ];
   totalRows = 36;
+
+  private _board: gameBoard = [];
 
   get board() {
     return this._board;

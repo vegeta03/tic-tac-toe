@@ -1,11 +1,9 @@
-<mat-grid-list cols="3" rowHeight="3:2">
-  <mat-grid-tile>1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-  <mat-grid-tile>5</mat-grid-tile>
-  <mat-grid-tile>6</mat-grid-tile>
-  <mat-grid-tile>7</mat-grid-tile>
-  <mat-grid-tile>8</mat-grid-tile>
-  <mat-grid-tile>9</mat-grid-tile>
+<mat-grid-list [cols]="columns" [rowHeight]="columns + ':' + (columns - 1)">
+  @for (row of boardService.board; track rowIndex; let rowIndex = $index) {
+    @for (column of row; track columnIndex; let columnIndex = $index) {
+      <mat-grid-tile>
+        {{ rowIndex + ", " + columnIndex }}
+      </mat-grid-tile>
+    }
+  }
 </mat-grid-list>
